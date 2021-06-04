@@ -48,11 +48,11 @@ const ProjectForm = (props) => {
     <div className="form">
       <form className="" onSubmit={handleSubmit}>
         <input type="text" className="items" placeholder="Type new project here " onChange={handleChange} name='input' id='input' value={proj.title} />
-        <textarea id="" className="items" cols="40" rows="2" placeholder="type description" onChange={handleChange} name='description' value={proj.description}></textarea>
+        <textarea id="" className="items px-4 py-2" cols="40" rows="2" placeholder="type description" onChange={handleChange} name='description' value={proj.description}></textarea>
         <select name="select" value={proj.rates} onChange={handleChange} className="items">
           {rate.map(el => <option key={el} value={el}>{el}</option>)}
         </select>
-        <button type="submit" >Submit</button>
+        <button type="button" className="btn btn-primary btn-lg" >Submit</button>
       </form>
     </div>
   );
