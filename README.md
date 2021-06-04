@@ -1,4 +1,43 @@
-# Getting Started with Create React App
+# Trackap
+>The project is the final project build with react as frontend and rails as backend. the will was building a project that fetch datas from rails Rest API. i build a track app the track the rates of submitted projects
+
+## live demo
+open [Link to Netlify](https://focused-murdock-288d42.netlify.app)
+
+## 🔧 Built With
+- CSS
+- JavaScript
+- React
+- Redux
+- Ruby
+- Rails
+
+#### To get this project on your local machine, follow these steps:
+
+1. Run this command `git@github.com:Guy-Gustave/front.git` in the desired folder to clone the repository on to your local machine.
+After cloning the project, you should move into the directory where the project is stored, for example `cd front`.
+
+3. Then run the following command install the necessary dependencies
+
+```bash
+    npm install
+```
+- Run `npm run start` to start the local server.
+
+
+## ✒️ Author
+
+👤 **Guy Gustave NIGABA**
+
+- Github: [@Gustave](https://github.com/Guy-Gustave)
+- Linkedin: [Guy-Gustave](https://www.linkedin.com/in/guy-gustave-nigaba)
+- E-mail: [guymoustapha@gmail.com](guymoustapha@gmail.com)
+
+## Show your support
+
+Give an ⭐️ if you like this project!
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -28,43 +67,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

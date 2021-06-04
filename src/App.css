@@ -1,7 +1,6 @@
 .App {
   text-align: center;
   background-color: rgb(252, 247, 247);
-  
 }
 
 .App-logo {
@@ -34,6 +33,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -54,20 +54,15 @@
 
 .projet {
   display: flex;
-  margin-left: 3rem;
+  margin: 10px 3rem;
   background-color: #fff;
   border: 1px solid #fff;
-  margin: 10px;
 }
 
 .column h1 {
   color: rgb(20, 18, 18);
   font-size: x-large;
   padding-bottom: 2rem;
-}
-
-.column h1 {
-  color: #333;
   display: flex;
 }
 
@@ -78,7 +73,7 @@
 
 .projet h1,
 .content {
-  padding:  10px ;
+  padding: 10px;
 }
 
 .column.rp p {
@@ -137,15 +132,11 @@
   font-size: 2rem;
 }
 
-
-
 .header {
   padding: 10px 3rem;
   font-size: 1.5rem;
   color: #282c34;
 }
-
-
 
 .ui.cards > .card .meta.price {
   margin-bottom: 5px;
