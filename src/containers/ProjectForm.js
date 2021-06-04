@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import { addProject } from '../actions';
+import '../App.css';
 
 const ProjectForm = (props) => {
   const [proj, setProj] = useState(
@@ -47,11 +48,12 @@ const ProjectForm = (props) => {
 
   const rate = ['select rates', '5', '4', '3', '2', '1']
   return (
-    <div className="form">
+    <div className="">
+      <h2 className="formulaire">Add new project</h2>
       <form className="" onSubmit={handleSubmit}>
-        <input type="text" className="items" placeholder="Type new project here " onChange={handleChange} name='input' id='input' value={proj.title} />
-        <textarea id="" className="items px-4 py-2" cols="40" rows="2" placeholder="type description" onChange={handleChange} name='description' value={proj.description}></textarea>
-        <select name="select" value={proj.rates} onChange={handleChange} className="items">
+        <input type="text" className="itm" placeholder="Type new project here " onChange={handleChange} name='input' id='input' value={proj.title} />
+        <textarea id="" className="desc px-4 py-2" cols="40" rows="2" placeholder="type description" onChange={handleChange} name='description' value={proj.description}></textarea>
+        <select name="select" value={proj.rates} onChange={handleChange} className="items rat">
           {rate.map(el => <option key={el} value={el}>{el}</option>)}
         </select>
         <button type="submit" className="btn btn-primary btn-lg" >Submit</button>

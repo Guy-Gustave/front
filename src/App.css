@@ -193,3 +193,30 @@
   color: #fff;
   font-size: 2.5rem;
 }
+
+.formulaire {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.itm,
+.rat {
+  height: 1.7rem;
+  margin: 0 20px;
+  padding: 1px 10px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 150px;
+  height: 1.8rem;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
