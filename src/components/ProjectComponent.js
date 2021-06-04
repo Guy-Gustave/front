@@ -1,12 +1,12 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../App.css';
 
-const ProjectComponent = () => {
-  const projects = useSelector((state) => state.allProjects.projects);
+const ProjectComponent = (props) => {
+  // const projects = useSelector((state) => state.allProjects.projects);
   
-  const renderList = projects.map((project) => {
+  const renderList = props.projects.map((project) => {
     const {
       id, title, description, rates
     } = project;

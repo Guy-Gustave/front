@@ -1,13 +1,15 @@
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 import axios from 'axios';
 import { setProjects } from '../actions/index';
 import ProjectComponent from '../components/ProjectComponent';
 import ProjectForm from './ProjectForm';
+// import { projects } from '../reducers/project';
 
-const ProjectList = () => {
+const ProjectList = (props) => {
   const dispatch = useDispatch();
 
+  // const projects = useSelector((state) => state.allProjects.projects);
   const fetchProjects = async () => {
     const response = await axios.get('https://trackap.herokuapp.com/projects');
     dispatch(setProjects(response.data));
@@ -15,15 +17,23 @@ const ProjectList = () => {
 
   useEffect(() => {
     fetchProjects();
-    // eslint-disable-next-line
+    // eslint-disable-next-line 
   }, []);
 
   return (
     <div className="affiche">
       <ProjectForm />
-      <ProjectComponent />
+      <ProjectComponent projects = {props.projects.projects}/>
     </div>
   );
 };
 
-export default ProjectList;
+const mapStateToProps = (state) => {
+  return (
+    {
+      projects: state.allProjects,
+    }
+  );
+} 
+
+export default connect(mapStateToProps, null)(ProjectList);

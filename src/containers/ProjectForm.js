@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { connect,useDispatch } from 'react-redux';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import { addProject } from '../actions';
@@ -31,15 +31,17 @@ const ProjectForm = (props) => {
     }
   };
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     let title = proj.title;
     let description = proj.description;
     let rates = proj.rates;
     const project = { title: title, description: description, rates: rates };
     const response = await axios.post('https://trackap.herokuapp.com/projects', project);
-    dispatch(addProject(response.data));
+    props.submitNewProject(response.data);
+
     console.log('the project is   ' + title + 'the description  is ' + description, 'with rates' + rates);
   };
 
@@ -52,7 +54,7 @@ const ProjectForm = (props) => {
         <select name="select" value={proj.rates} onChange={handleChange} className="items">
           {rate.map(el => <option key={el} value={el}>{el}</option>)}
         </select>
-        <button type="button" className="btn btn-primary btn-lg" >Submit</button>
+        <button type="submit" className="btn btn-primary btn-lg" >Submit</button>
       </form>
     </div>
   );
