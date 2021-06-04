@@ -15,6 +15,7 @@ const ProjectList = () => {
 
   useEffect(() => {
     fetchProjects();
+    // eslint-disable-next-line
   }, []);
 
   return (
