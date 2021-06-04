@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import { setProjects } from '../actions/index';
-import ProjectComponent from '../coomponents/ProjectComponent';
+import ProjectComponent from '../components/ProjectComponent';
 import ProjectForm from './ProjectForm';
 
 const ProjectList = () => {

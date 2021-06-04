@@ -1,0 +1,195 @@
+.App {
+  text-align: center;
+  background-color: rgb(252, 247, 247);
+  
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  text-decoration: none;
+  margin: 0;
+}
+
+.column {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.projet {
+  display: flex;
+  margin-left: 3rem;
+  background-color: #fff;
+  border: 1px solid #fff;
+  margin: 10px;
+}
+
+.column h1 {
+  color: rgb(20, 18, 18);
+  font-size: x-large;
+  padding-bottom: 2rem;
+}
+
+.column h1 {
+  color: #333;
+  display: flex;
+}
+
+.column p {
+  text-align: center;
+  padding: 10px 50px;
+}
+
+.projet h1,
+.content {
+  padding:  10px ;
+}
+
+.column.rp p {
+  font-size: 18px;
+  color: #777;
+}
+
+.affiche {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  column-gap: 2rem;
+}
+
+.detail-project {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 3rem;
+}
+
+.column img {
+  width: 30rem;
+  margin: 2rem;
+}
+
+.tag-price {
+  padding: 1.7rem;
+  font-size: 2rem;
+  color: rgb(93, 93, 133);
+}
+
+.column h3 {
+  font-size: xx-large;
+  color: rgb(63, 13, 13);
+  padding-bottom: 3rem;
+}
+
+.ui.cards > .card > .image {
+  height: 250px;
+  padding: 20px;
+  background: rgb(240, 233, 233);
+  margin: auto;
+}
+
+.ui.cards > .card > .image > img {
+  height: 100%;
+  max-width: 100%;
+  width: auto;
+}
+
+.content {
+  margin-left: auto;
+  padding: 5px 3rem;
+  display: flex;
+  font-size: 2rem;
+}
+
+
+
+.header {
+  padding: 10px 3rem;
+  font-size: 1.5rem;
+  color: #282c34;
+}
+
+
+
+.ui.cards > .card .meta.price {
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+}
+
+.ui.cards > .card .meta.price > a {
+  font-size: 1.3rem;
+  color: #222;
+}
+
+.ui.menu.fixed {
+  height: 60px;
+  padding-top: 15px;
+}
+
+.ui.grid.container {
+  margin-top: 45px;
+}
+
+.ui.grid > .row {
+  background: #fff;
+}
+
+.ui.grid > .row > .column.lp {
+  padding: 20px 40px 20px 20px;
+  align-self: flex-start !important;
+}
+
+.ui.grid > .row > .column.rp {
+  padding: 20px 20px 20px 40px;
+  text-align: left;
+  align-self: flex-start !important;
+}
+
+.ui.label,
+.ui.labels .label {
+  font-size: 22px;
+}
+
+.nav {
+  background-color: #61dafb;
+  color: #fff;
+  font-size: 2.5rem;
+}
