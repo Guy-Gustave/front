@@ -8,7 +8,7 @@ const initialState = {
 export const projects = (state = initialState, action) => {
   switch (action.type) {
     case 'CREATE_PROJECT':
-      return [...state, action.project];
+      return { ...state, projects: state.projects.concat(action.project)};
     case 'REMOVE_PROJECT':
       return [...state.filter((project) => action.id !== project.id)];
     default:
