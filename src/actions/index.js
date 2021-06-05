@@ -1,22 +1,18 @@
-import ActionsType from "../components/actionType";
+import ActionsType from '../components/actionType';
 
-export const addProject = projectObj => {
-  return (
-    {
-      type: 'CREATE_PROJECT',
-      project: { ...projectObj }
-    }
-  )
-}
+export const addProject = (projectObj) => (
+  {
+    type: 'CREATE_PROJECT',
+    project: { ...projectObj },
+  }
+);
 
-export const removeProject = projectObj => {
-  return (
-    {
-      type: 'REMOVE_PROJECT',
-      id: projectObj.id,
-    }
-  );
-}
+export const removeProject = (projectObj) => (
+  {
+    type: 'REMOVE_PROJECT',
+    id: projectObj.id,
+  }
+);
 
 export const setProjects = (projects) => ({
   type: ActionsType.SET_PROJECTS,

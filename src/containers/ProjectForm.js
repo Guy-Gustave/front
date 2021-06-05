@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -36,27 +35,25 @@ const ProjectForm = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let title = proj.title;
-    let description = proj.description;
-    let rates = proj.rates;
-    const project = { title: title, description: description, rates: rates };
+    const { title } = proj;
+    const { description } = proj;
+    const { rates } = proj;
+    const project = { title, description, rates };
     const response = await axios.post('https://trackap.herokuapp.com/projects', project);
     props.submitNewProject(response.data);
-
-    console.log('the project is   ' + title + 'the description  is ' + description, 'with rates' + rates);
   };
 
-  const rate = ['select rates', '5', '4', '3', '2', '1']
+  const rate = ['select rates', '5', '4', '3', '2', '1'];
   return (
     <div className="">
       <h2 className="formulaire">Add new project</h2>
       <form className="" onSubmit={handleSubmit}>
-        <input type="text" className="itm" placeholder="Type new project here " onChange={handleChange} name='input' id='input' value={proj.title} />
-        <textarea id="" className="desc px-4 py-2" cols="40" rows="2" placeholder="type description" onChange={handleChange} name='description' value={proj.description}></textarea>
+        <input type="text" className="itm" placeholder="Type new project here " onChange={handleChange} name="input" id="input" value={proj.title} />
+        <textarea id="" className="desc px-4 py-2" cols="40" rows="2" placeholder="type description" onChange={handleChange} name="description" value={proj.description} />
         <select name="select" value={proj.rates} onChange={handleChange} className="items rat">
-          {rate.map(el => <option key={el} value={el}>{el}</option>)}
+          {rate.map((el) => <option key={el} value={el}>{el}</option>)}
         </select>
-        <button type="submit" className="btn btn-primary btn-lg" >Submit</button>
+        <button type="submit" className="btn btn-primary btn-lg">Submit</button>
       </form>
     </div>
   );
