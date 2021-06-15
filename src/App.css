@@ -90,9 +90,9 @@
 
 .detail-project {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  margin: 3rem;
+  margin: 2rem;
 }
 
 .column img {
@@ -101,7 +101,7 @@
 }
 
 .tag-price {
-  padding: 1.7rem;
+  padding: 1rem 1.7rem;
   font-size: 2rem;
   color: rgb(93, 93, 133);
 }
@@ -210,4 +210,77 @@ form {
   border: none;
   border-radius: 5px;
   color: #fff;
+}
+
+ul.taskList {
+	padding: 0 25px;
+}
+
+li.task {
+	list-style-type: none;
+	font-family: Tahoma;
+	font-size: 1.2em;
+	padding: 10px 0;
+	border-bottom: 1px solid #ccc;
+}
+
+li.task:hover .deleteTaskBtn {
+	visibility: visible;
+	opacity: 1;
+}
+
+input.taskCheckbox {
+	position: relative;
+	float: left;
+	margin-right: 10px;
+	-webkit-appearance: none;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	outline: none;
+	margin-left: 5px;
+	text-align: center;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+input.taskCheckbox:checked:after {
+	color: green;
+	content: "\2713";
+	display: block;
+	font-size: 17px;
+	height: 17px;
+	position: absolute;
+	width: 17px;
+	left: 0.5px;
+	bottom: 2px;
+}
+
+input.taskCheckbox + label.taskLabel {
+	color: black;
+}
+
+input.taskCheckbox:checked + label.taskLabel {
+	text-decoration: line-through;
+	color: #656565;
+}
+
+input[placeholder] {
+	font-size: 1.1em;
+}
+
+.container {
+	width: 40%;
+	height: 400px;
+	position: relative;
+	margin: 0 auto;
+	border-radius: 5px;
+}
+
+.inputContainer .taskInput {
+	padding: 10px;
+	width: 100%;
+	border-radius: 15px;
+	box-sizing: border-box;
 }
