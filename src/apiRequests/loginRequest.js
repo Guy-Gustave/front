@@ -3,7 +3,8 @@ import axios from 'axios';
 import { userApiFailure, userApiRequest, userApiSuccess } from '../actions/index';
 import header, { url } from './apiLink';
 
-const login = user => dispatch => {
+const login = user => async dispatch => {
+
   dispatch(userApiRequest());
   console.log("hello")
   axios.post(`${url}/auth/login`, user, header)
@@ -11,14 +12,13 @@ const login = user => dispatch => {
       const userRes = response.data;
       if (userRes.message === 'Login Successful') {
         dispatch(userApiSuccess(userRes));
-        // console.log('RESPONSE', user);
-        // console.log('RESPONSE2', userRes);
-        localStorage.setItem('user', JSON.stringify(userRes.user.username));
-        window.location.replace('/airlinesList');
+        localStorage.setItem('user', JSON.stringify(userRes.user.name));
+        window.location.replace('/projects');
       }
     })
     .catch(error => {
       const errorMsg = error.message;
+      console.log(user)
       dispatch(userApiFailure(errorMsg));
     });
 };

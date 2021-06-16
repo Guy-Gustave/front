@@ -5,6 +5,7 @@ import Login from './containers/Login';
 import Register from './containers/Register';
 import ProjectList from './containers/ProjetList';
 import ProjectDetails from './components/ProjectDetails';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Routes = () => (
   <Router>

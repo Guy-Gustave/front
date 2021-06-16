@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState } from 'react';
 import { connect, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -19,6 +20,11 @@ const Login = props => {
     }
   };
 
+  const handleRegister = () => {
+    const { history } = props;
+    history.push('/projects');
+  };
+
   const handleSubmit = event => {
     event.preventDefault();
     const { signIn } = props;
@@ -29,9 +35,11 @@ const Login = props => {
     if (email || password !== '') {
       setErrorMsg('');
       signIn(user);
+      handleRegister()
     } else {
       setErrorMsg('Please, enter correct credentials!');
     }
+    console.log('je suis clicque')
   };
 
   const validateForm = () => {
@@ -66,7 +74,7 @@ const Login = props => {
         <button type="submit" className={`${LoginStyles.btn} btn`} onClick={handleSubmit}>Login</button>
         <div>
           <span>Don&apos;t have an account? </span>
-          <Link to="/register">Register</Link>
+          <Link to="/signup">Register</Link>
         </div>
         {errorMsg === '' ? '' : <h3 className="text-danger">{errorMsg}</h3>}
         {user.error === '' ? '' : <h3 className="text-danger">Incorrect email or password</h3>}

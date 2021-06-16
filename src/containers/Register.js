@@ -11,7 +11,7 @@ const Register = props => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  // const [username, setUsername] = useState('');
+  const [password_confirmation, setpassword_confirmation] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
 
   const handleChange = event => {
@@ -19,8 +19,8 @@ const Register = props => {
       setName(event.target.value);
     } else if (event.target.name === 'email') {
       setEmail(event.target.value);
-    } else if (event.target.name === 'username') {
-      setUsername(event.target.value);
+    } else if (event.target.name === 'password_confirmation') {
+      setpassword_confirmation(event.target.value);
     } else {
       setPassword(event.target.value);
     }
@@ -28,7 +28,7 @@ const Register = props => {
 
   const handleRegister = () => {
     const { history } = props;
-    history.push('/airlinesList');
+    history.push('/projects');
   };
 
   const handleSubmit = event => {
@@ -37,6 +37,7 @@ const Register = props => {
       name,
       email,
       password,
+      password_confirmation
     }));
     if (email || password !== '') {
       setErrorMsg('');
@@ -68,12 +69,7 @@ const Register = props => {
           <input type="text" name="name" id="name" placeholder="Enter your name" onChange={handleChange} value={name.name} />
         </label>
         <br />
-        {/* <label htmlFor="username" className="text-left">
-          Username:
-          <br />
-          <input type="text" name="username" id="username" placeholder="Enter your username" onChange={handleChange} value={username.username} />
-        </label> */}
-        <br />
+        
         <label htmlFor="email" className="text-left">
           Email:
           <br />
@@ -86,7 +82,13 @@ const Register = props => {
           <input type="password" name="password" id="password" placeholder="Enter your password" onChange={handleChange} value={password.password} />
         </label>
         <br />
-        <button type="submit" className={`${RegisterStyles.btn} btn`} onClick={handleSubmit}>Register</button>
+        <label htmlFor="password_confirmation" className="text-left">
+          password_confirmation:
+          <br />
+          <input type="text" name="password_confirmation" id="password_confirmation" placeholder="Enter your password_confirmation" onChange={handleChange} value={password_confirmation.password_confirmation} />
+        </label>
+        <br />
+        <button type="submit" className={`${RegisterStyles.btn} btn`} onClick={handleSubmit}> Register</button>
         <div>
           <span>Already have an account? </span>
           <Link to="/login">Login</Link>

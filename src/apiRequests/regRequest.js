@@ -5,7 +5,7 @@ import header, { url } from './apiLink';
 
 const registration = userObj => dispatch => {
   dispatch(userApiRequest());
-  axios.post(`${url}/auth/signup`, userObj, header)
+  axios.post(`${url}/signup`, userObj, header)
     .then(response => {
       const userRes = response.data;
       dispatch(userApiSuccess(userRes));
