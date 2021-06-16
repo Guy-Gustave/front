@@ -1,4 +1,10 @@
-import ActionsType from '../components/actionType';
+import {
+  ActionsType,
+  LOGOUT_USER,
+  USER_API_FAILURE,
+  USER_API_REQUEST,
+  USER_API_SUCCESS,
+} from '../components/actionType';
 
 export const addProject = (projectObj) => (
   {
@@ -22,4 +28,22 @@ export const setProjects = (projects) => ({
 export const selectedProject = (project) => ({
   type: ActionsType.SELECT_PROJECTS,
   payload: project,
+});
+
+export const userApiRequest = () => ({
+  type: USER_API_REQUEST,
+});
+
+export const userApiSuccess = (data) => ({
+  type: USER_API_SUCCESS,
+  payload: data.user.name,
+});
+
+export const userApiFailure = (error) => ({
+  type: USER_API_FAILURE,
+  payload: error,
+});
+
+export const logoutUserAction = () => ({
+  type: LOGOUT_USER,
 });

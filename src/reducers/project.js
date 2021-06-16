@@ -1,4 +1,4 @@
-import ActionsType from '../components/actionType';
+import { ActionsType } from '../components/actionType';
 
 const initialState = {
   projects: [
