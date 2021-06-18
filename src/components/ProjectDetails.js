@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { selectedProject } from '../actions/index';
 import '../App.css';
+import TaskList from '../containers/TaskList';
 
 const ProjectDetails = () => {
   const project = useSelector((state) => state.project);
@@ -13,8 +14,10 @@ const ProjectDetails = () => {
   const { projectId } = useParams();
   const dispatch = useDispatch();
 
+  // url ='https://trackap.herokuapp.com/projects'
+
   const fetchProjectsDetail = async () => {
-    const response = await axios.get(`https://trackap.herokuapp.com/projects/${projectId}`);
+    const response = await axios.get(`https://localhost/projects/${projectId}`);
     dispatch(selectedProject(response.data));
   };
   useEffect(() => {
@@ -50,8 +53,13 @@ const ProjectDetails = () => {
             </h3>
 
           </div>
+          <div className="tas">
+            <TaskList />
+          </div>
+
         </div>
       )}
+
     </div>
   );
 };

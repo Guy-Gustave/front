@@ -18,7 +18,7 @@
 
 .btn {
   background-color: rgb(151, 191, 15);
-  font-size: 18px;
+  font-size: 28px;
   color: whitesmoke;
   padding: 0.7rem 1.7rem;
   border-radius: 1.5rem;
@@ -29,10 +29,9 @@
   color: whitesmoke;
 }
 
-.leftBtn {
-  margin-right: 0.5rem;
+.leftBtn
+.rightBtn {
+  margin: 3.5rem;
+  font-size: 2rem;
 }
 
-.rightBtn {
-  margin-left: 0.5rem;
-}

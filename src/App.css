@@ -156,7 +156,7 @@
 }
 
 .ui.grid.container {
-  margin-top: 45px;
+  margin-top: 35px;
 }
 
 .ui.grid > .row {
@@ -182,7 +182,16 @@
 .nav {
   background-color: #61dafb;
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.nav h1 {
+  text-align: center;
+  margin: auto;
+  font-size: 3rem;
+  font-weight: bolder;
 }
 
 .formulaire {
@@ -193,8 +202,9 @@
 .itm,
 .rat {
   height: 1.7rem;
-  margin: 0 20px;
+  margin: 0 3rem;
   padding: 1px 10px;
+  width: 25%;
 }
 
 form {
@@ -213,7 +223,10 @@ form {
 }
 
 ul.taskList {
-	padding: 0 25px;
+  padding: 0 25px;
+  width: 40%;
+  margin-left: auto;
+  margin-top: 3rem;
 }
 
 li.task {
@@ -270,17 +283,31 @@ input[placeholder] {
 	font-size: 1.1em;
 }
 
-.container {
-	width: 40%;
-	height: 400px;
-	position: relative;
-	margin: 0 auto;
-	border-radius: 5px;
+.btn- {
+  background-color: rgb(151, 191, 15);
+  font-size: 28px;
+  color: whitesmoke;
+  padding: 0.7rem 1.7rem;
+  border-radius: 1.5rem;
 }
 
-.inputContainer .taskInput {
-	padding: 10px;
-	width: 100%;
-	border-radius: 15px;
-	box-sizing: border-box;
+.listWrapper {
+  position: absolute;
+  bottom: 50px;
+  top: 120px;
+  right: 0;
+  left: 0;
+  overflow: auto;
+}
+
+.listWrapper input[type=text]{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-left: auto;
+  border-radius: 15px;
+}
+
+.desc {
+  margin-left: 3rem;
 }

@@ -56,9 +56,9 @@ const Login = props => {
     <>
       <form name="myForm" data-testid="form" className={LoginStyles.loginForm} onSubmit={validateForm}>
         <Link className={LoginStyles.homeLink} style={{ textDecoration: 'none' }} to="/">
-          <button type="button" data-testid="home" className={`${LoginStyles.homeBtn} btn`}>Home</button>
+          <button type="button" data-testid="home" className={`${LoginStyles.homeBtn } btn`}>Home</button>
         </Link>
-        <h4>Login</h4>
+        {/* <h4>Login</h4> */}
         <label htmlFor="email" className="text-left">
           Email:
           <br />
@@ -74,7 +74,7 @@ const Login = props => {
         <button type="submit" className={`${LoginStyles.btn} btn`} onClick={handleSubmit}>Login</button>
         <div>
           <span>Don&apos;t have an account? </span>
-          <Link to="/signup">Register</Link>
+          <Link to="/signup">Signup</Link>
         </div>
         {errorMsg === '' ? '' : <h3 className="text-danger">{errorMsg}</h3>}
         {user.error === '' ? '' : <h3 className="text-danger">Incorrect email or password</h3>}
