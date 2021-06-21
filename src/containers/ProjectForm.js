@@ -39,7 +39,7 @@ const ProjectForm = (props) => {
     const { description } = proj;
     const { rates } = proj;
     const project = { title, description, rates };
-    const response = await axios.post('https://trackap.herokuapp.com/projects', project);
+    const response = await axios.post('http://localhost:3001/projects', project);
     props.submitNewProject(response.data);
   };
 

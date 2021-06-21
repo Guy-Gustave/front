@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import '../App.css';
+import update from 'immutability-helper'
 
 class TaskList extends Component {
   constructor(props) {
@@ -34,7 +35,11 @@ class TaskList extends Component {
 
   createTask = (e) => {
     if (e.key === 'Enter') {
-      axios.post(`https://localhost:3001/projects/${projectId}tasks`, { task: { title: e.target.value } })
+      axios.post(`http://localhost:3001/projects/1/tasks`, {
+        "title": "new one",
+        "done":false,
+        "project_id": 1
+    })
         .then(response => {
           const tasks = update(this.state.tasks, {
             $splice: [[0, 0, response.data]]
