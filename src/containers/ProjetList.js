@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import { connect, useDispatch } from 'react-redux';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 import { setProjects } from '../actions/index';
 import ProjectComponent from '../components/ProjectComponent';
 import ProjectForm from './ProjectForm';
@@ -10,9 +11,14 @@ const ProjectList = (props) => {
   const dispatch = useDispatch();
 
   const fetchProjects = async () => {
-    const response = await axios.get('http://localhost:3001/projects');
+    const response = await axios.get('https://trackap.herokuapp.com/projects');
     dispatch(setProjects(response.data));
   };
+
+  const history = useHistory();
+  if (user === null) {
+    history.push('/login');
+  }
 
   useEffect(() => {
     fetchProjects();

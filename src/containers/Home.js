@@ -4,7 +4,7 @@ import '../App.css';
 
 const Home = () => (
   <div className="home">
-    <h1 className={heading}>Elcome</h1>
+    <h1 className="">Welcome</h1>
     <div className="home">
       <Link to="/login" className="btn-">
         <button type="button" className="btn-">Login</button>
