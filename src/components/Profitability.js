@@ -9,7 +9,7 @@ export default class Profitability extends Component {
     };
   }
 
-  addVote = () => {
+  addVote()   {
     const newCount = this.state.votes + 1;
     this.setState({
       votes: newCount,

@@ -28,12 +28,12 @@ class TaskList extends Component {
     this.getTasks()
   }
 
-  handleChange = (e) => {
+  handleChange(e) {
     this.setState({ inputValue: e.target.value });
   }
   // https://trackap.herokuapp.com
 
-  createTask = (e) => {
+  createTask(e) {
     if (e.key === 'Enter') {
       axios.post(`http://localhost:3001/projects/1/tasks`, {
         "title": "new one",
