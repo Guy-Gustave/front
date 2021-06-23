@@ -103,7 +103,6 @@
 .tag-price {
   padding: 1rem 1.7rem;
   font-size: 1.3rem;
-  /* color: rgb(93, 93, 133); */
 }
 
 .column h3 {
@@ -312,7 +311,7 @@ input[placeholder] {
   width: 40%;
 }
 
-.desc h2 span{
+.desc h2 span {
   padding-left: 1rem;
   font-weight: 700;
 }
