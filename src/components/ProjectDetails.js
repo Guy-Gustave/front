@@ -18,7 +18,7 @@ const ProjectDetails = (props) => {
   // url ='https://trackap.herokuapp.com/projects'
 
   const fetchProjectsDetail = async () => {
-    const response = await axios.get(`http://localhost:3001/projects/${projectId}`);
+    const response = await axios.get(`https://trackap.herokuapp.com/projects/${projectId}`);
     dispatch(selectedProject(response.data));
 
   };

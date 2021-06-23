@@ -11,14 +11,9 @@ const ProjectList = (props) => {
   const dispatch = useDispatch();
 
   const fetchProjects = async () => {
-    const response = await axios.get('http://localhost:3001/projects');
+    const response = await axios.get('https://trackap.herokuapp.com/projects');
     dispatch(setProjects(response.data));
   };
-
-  // const history = useHistory();
-  // if (user === null) {
-  //   history.push('/login');
-  // }
 
   useEffect(() => {
     fetchProjects();

@@ -17,7 +17,7 @@ class TaskList extends Component {
 
 
   getTasks() {
-    axios.get(`http://localhost:3001/projects/${this.props.projectId}/tasks`)
+    axios.get(`https://trackap.herokuapp.com/projects/${this.props.projectId}/tasks`)
       .then(response => {
         this.setState({ tasks: response.data })
       })
@@ -35,7 +35,7 @@ class TaskList extends Component {
 
   createTask(e) {
     if (e.key === 'Enter') {
-      axios.post(`http://localhost:3001/projects/${this.props.projectId}/tasks`, {
+      axios.post(`https://trackap.herokuapp.com/projects/${this.props.projectId}/tasks`, {
         "title": this.state.inputValue,
         "done":false,
         "project_id": this.props.projectId
