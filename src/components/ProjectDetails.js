@@ -24,7 +24,6 @@ const ProjectDetails = (props) => {
   };
   useEffect(() => {
     if (projectId && projectId !== '') fetchProjectsDetail();
-    // eslint-disable-next-line
   }, [projectId]);
   return (
     <div className="ui grid container">

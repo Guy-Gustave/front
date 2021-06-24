@@ -2,7 +2,7 @@
 >The project is the final project build with react as frontend and rails as backend. the will was building a project that fetch datas from rails Rest API. i build a track app the track the rates of submitted projects
 
 ## live demo
-open [Link to Netlify](https://focused-murdock-288d42.netlify.app)
+open [Link to Netlify](https://pensive-wiles-fab0ec.netlify.app/)
 
 ## 🔧 Built With
 - CSS
