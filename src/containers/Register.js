@@ -84,8 +84,8 @@ const Register = props => {
         <br />
         <label htmlFor="password_confirmation" className="text-left">
           password_confirmation:
-          <br />
-          <input type="text" name="password_confirmation" id="password_confirmation" placeholder="Enter your password_confirmation" onChange={handleChange} value={password_confirmation.password_confirmation} />
+          <br/>
+          <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Enter your password_confirmation" onChange={handleChange} value={password_confirmation.password_confirmation} />
         </label>
         <br />
         <button type="submit" className={`${RegisterStyles.btn} btn`} onClick={handleSubmit}> Register</button>
