@@ -331,3 +331,11 @@ input[placeholder] {
   justify-content: space-around;
   text-decoration: none;
 }
+
+.ho a {
+  text-decoration: none;
+  border: 1px solid blue;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  margin-bottom: 10rem;
+}
