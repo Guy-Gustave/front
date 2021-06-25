@@ -111,6 +111,14 @@
   padding-bottom: 3rem;
 }
 
+.ho a {
+  text-decoration: none;
+  border: 1px solid blue;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  margin-bottom: 10rem;
+}
+
 .ui.cards > .card > .image {
   height: 250px;
   padding: 20px;
@@ -330,12 +338,4 @@ input[placeholder] {
   margin: 5rem 10rem;
   justify-content: space-around;
   text-decoration: none;
-}
-
-.ho a {
-  text-decoration: none;
-  border: 1px solid blue;
-  padding: 1rem 2rem;
-  border-radius: 10px;
-  margin-bottom: 10rem;
 }
