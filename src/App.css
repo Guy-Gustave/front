@@ -315,3 +315,19 @@ input[placeholder] {
   padding-left: 1rem;
   font-weight: 700;
 }
+
+.home {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.ho {
+  display: flex;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 5rem 10rem;
+  justify-content: space-around;
+  text-decoration: none;
+}

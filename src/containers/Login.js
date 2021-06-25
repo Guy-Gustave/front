@@ -74,7 +74,7 @@ const Login = props => {
         <button type="submit" className={`${LoginStyles.btn} btn`} onClick={handleSubmit}>Login</button>
         <div>
           <span>Don&apos;t have an account? </span>
-          <Link to="/signup">Signup</Link>
+          <Link to="/signup">Sign_up</Link>
         </div>
         {errorMsg === '' ? '' : <h3 className="text-danger">{errorMsg}</h3>}
         {user.error === '' ? '' : <h3 className="text-danger">Incorrect email or password</h3>}
