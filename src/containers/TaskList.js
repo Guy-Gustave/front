@@ -66,7 +66,7 @@ class TaskList extends Component {
                 <li className="task" task={task} key={task.id}>
                   <input className="taskCheckbox" type="checkbox" />
                   <label className="taskLabel">{task.title}</label>
-                  <span className="deleteTaskBtn">x</span>
+                  <span className="deleteTaskBtn"></span>
                 </li>
               )
             })}
