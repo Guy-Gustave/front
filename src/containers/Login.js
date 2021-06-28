@@ -39,7 +39,7 @@ const Login = props => {
     } else {
       setErrorMsg('Please, enter correct credentials!');
     }
-    console.log('je suis clicque')
+    // console.log('je suis clicque')
   };
 
   const validateForm = () => {
