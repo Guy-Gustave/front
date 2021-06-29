@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -39,8 +40,18 @@ const ProjectForm = (props) => {
     const { description } = proj;
     const { rates } = proj;
     const project = { title, description, rates };
-    const response = await axios.post('https://trackap.herokuapp.com/projects', project);
-    props.submitNewProject(response.data);
+    await axios.post('http://localhost:3001/projects', project)
+      .then(response => {
+        console.log(response)
+        if( response.data.status == "created"){
+          // props.submitNewProject(response.data.project);
+          props.handleFetchProjects();
+        }
+      })
+      .catch((err) => {
+        console.log("This error is inside the catch", err);
+      });
+    // 
   };
 
   const rate = ['select rates', '5', '4', '3', '2', '1'];

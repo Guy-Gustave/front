@@ -11,7 +11,7 @@ const ProjectList = (props) => {
   const dispatch = useDispatch();
 
   const fetchProjects = async () => {
-    const response = await axios.get('https://trackap.herokuapp.com/projects');
+    const response = await axios.get('http://localhost:3001/projects');
     dispatch(setProjects(response.data));
   };
 
@@ -22,8 +22,8 @@ const ProjectList = (props) => {
 
   return (
     <div className="affiche">
-      <ProjectForm />
-      <ProjectComponent projects={props.projects.projects} />
+      <ProjectForm handleFetchProjects={fetchProjects}/>
+      <ProjectComponent/>
     </div>
   );
 };
