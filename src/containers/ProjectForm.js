@@ -40,7 +40,7 @@ const ProjectForm = (props) => {
     const { description } = proj;
     const { rates } = proj;
     const project = { title, description, rates };
-    await axios.post('http://localhost:3001/projects', project)
+    await axios.post('https://trackap.herokuapp.com/projects', project)
       .then(response => {
         console.log(response)
         if( response.data.status == "created"){

@@ -15,10 +15,6 @@ const Routes = () => (
       <Route path="/login" component={Login} />
       <Route path="/projects" exact component={ProjectList} />
       <Route path="/project/:projectId" exact component={ProjectDetails} />
-      {/* <Route path="/airlineDetails/:id" component={AirlineDetails} />
-      <Route path="/bookTicket" component={BookTicket} />
-      <Route path="/tickets" component={Tickets} /> */}
-      {/* <Route path="/ticketDetails/:id" component={TicketDetails} /> */}
     </Switch>
   </Router>
 );
