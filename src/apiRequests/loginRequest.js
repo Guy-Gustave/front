@@ -12,7 +12,7 @@ const login = user => async dispatch => {
       const userRes = response.data;
       if (userRes.message === 'Login Successful') {
         dispatch(userApiSuccess(userRes));
-        localStorage.setItem('user', JSON.stringify(userRes.user.name));
+        localStorage.setItem('user', JSON.stringify(userRes.user.email));
         window.location.replace('/projects');
       }
     })
