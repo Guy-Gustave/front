@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 import { addProject } from '../actions';
 import '../App.css';
+import { url } from '../apiRequests/apiLink';
 
 const ProjectForm = (props) => {
   const [proj, setProj] = useState(
@@ -40,7 +41,7 @@ const ProjectForm = (props) => {
     const { description } = proj;
     const { rates } = proj;
     const project = { title, description, rates };
-    await axios.post('https://trackap.herokuapp.com/projects', project)
+    await axios.post(`${url}/projects`, project)
       .then(response => {
         console.log(response)
         if( response.data.status == "created"){

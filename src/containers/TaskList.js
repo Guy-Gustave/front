@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import '../App.css';
 import update from 'immutability-helper'
+import { url } from '../apiRequests/apiLink';
 
 class TaskList extends Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class TaskList extends Component {
 
 
   getTasks() {
-    axios.get(`https://trackap.herokuapp.com/projects/${this.props.projectId}/tasks`)
+    axios.get(`${url}/projects/${this.props.projectId}/tasks`)
       .then(response => {
         this.setState({ tasks: response.data })
       })
@@ -35,7 +36,7 @@ class TaskList extends Component {
 
   createTask(e) {
     if (e.key === 'Enter') {
-      axios.post(`https://trackap.herokuapp.com/projects/${this.props.projectId}/tasks`, {
+      axios.post(`${url}/projects/${this.props.projectId}/tasks`, {
         "title": this.state.inputValue,
         "done":false,
         "project_id": this.props.projectId

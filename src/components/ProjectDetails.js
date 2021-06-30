@@ -6,6 +6,7 @@ import axios from 'axios';
 import { selectedProject } from '../actions/index';
 import '../App.css';
 import TaskList from '../containers/TaskList';
+import { url } from '../apiRequests/apiLink';
 
 const ProjectDetails = (props) => {
   const project = useSelector((state) => state.project);
@@ -18,7 +19,7 @@ const ProjectDetails = (props) => {
   // url ='https://trackap.herokuapp.com/projects'
 
   const fetchProjectsDetail = async () => {
-    const response = await axios.get(`https://trackap.herokuapp.com/projects/${projectId}`);
+    const response = await axios.get(`${url}/projects/${projectId}`);
     dispatch(selectedProject(response.data));
 
   };

@@ -6,12 +6,13 @@ import axios from 'axios';
 import { setProjects } from '../actions/index';
 import ProjectComponent from '../components/ProjectComponent';
 import ProjectForm from './ProjectForm';
+import { url } from '../apiRequests/apiLink';
 
 const ProjectList = (props) => {
   const dispatch = useDispatch();
 
   const fetchProjects = async () => {
-    const response = await axios.get('https://trackap.herokuapp.com/projects');
+    const response = await axios.get(`${url}/projects`);
     dispatch(setProjects(response.data));
   };
 
