@@ -1,6 +1,5 @@
-/* eslint-disable */
 import React from 'react';
-import { Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Login from './containers/Login';
 import Register from './containers/Register';
@@ -15,7 +14,7 @@ const Routes = () => (
     <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/signup" component={Register} />
-      <Route exact path="/login" component={Login} />
+      <Route path="/login" component={Login} />
       <Route path="/projects" exact component={ProjectList} />
       <Route path="/project/:projectId" exact component={ProjectDetails} />
     </Switch>
