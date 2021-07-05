@@ -6,7 +6,7 @@ import header, { url } from './apiLink';
 const login = user => async dispatch => {
 
   dispatch(userApiRequest());
-  console.log("hello")
+  // console.log("hello")
   axios.post(`${url}/auth/login`, user, header)
     .then(response => {
       const userRes = response.data;
@@ -18,7 +18,7 @@ const login = user => async dispatch => {
     })
     .catch(error => {
       const errorMsg = error.message;
-      console.log(user)
+      // console.log(user)
       dispatch(userApiFailure(errorMsg));
     });
 };

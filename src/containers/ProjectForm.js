@@ -43,7 +43,7 @@ const ProjectForm = (props) => {
     const project = { title, description, rates };
     await axios.post(`${url}/projects`, project)
       .then(response => {
-        console.log(response)
+        // console.log(response)
         if( response.data.status == "created"){
           // props.submitNewProject(response.data.project);
           props.handleFetchProjects();

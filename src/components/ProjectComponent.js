@@ -16,13 +16,13 @@ const ProjectComponent = (props) => {
 
       return (
         <div className="ui four column comp" key={id}>
-          <Link to={`/project/${id}`}>
+          <Link to={`/project/${id}`} style={{textDecoration:'none'}}>
 
             <div className="projet ">
               <h1>
                 {id}
-                {' '}
-                :
+                {') '}
+                {/* Title:{' '}   */}
                 {title}
               </h1>
               <div className="header">{description}</div>

@@ -32,7 +32,7 @@ const Login = props => {
       email,
       password,
     };
-    if (email || password !== '') {
+    if ((email !=='') && (password !== '')) {
       setErrorMsg('');
       signIn(user);
       handleRegister()

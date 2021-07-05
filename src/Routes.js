@@ -7,8 +7,6 @@ import ProjectList from './containers/ProjetList';
 import ProjectDetails from './components/ProjectDetails';
 // import history from './components/History'
 
-// import 'bootstrap/dist/css/bootstrap.min.css';
-
 const Routes = () => (
   <Router>
     <Switch>
