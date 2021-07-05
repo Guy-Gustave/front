@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import renderer from 'react-test-renderer';
+// import renderer from 'react-test-renderer';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
@@ -10,8 +10,6 @@ const mockStore = configureMockStore();
 const store = mockStore({});
 
 describe('Register', () => {
-  
-
   test('renders Register component', () => {
     const { queryAllByTestId } = render(
       (
