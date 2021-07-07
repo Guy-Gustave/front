@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 .homeLink {
   display: flex;
   justify-content: flex-end;
@@ -41,4 +45,33 @@ input[type=password] {
   border: 1px solid #ccc;
   border-radius: 0.25rem;
   box-sizing: border-box;
+}
+
+@media only screen and (max-width: 768px) {
+  .homeBtn {
+    font-size: 20px;
+    padding-bottom: 3rem;
+    margin: 1.5rem;
+    background-color: rgb(112, 245, 245);
+    color: black;
+    text-decoration: none;
+  }
+
+  input[type=text], input[type=password] {
+    width: 60%;
+    padding: 0.625rem 1.25rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    height: 1.6rem;
+    font-size: .8rem;
+  }
+
+  label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
 }

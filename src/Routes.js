@@ -5,6 +5,7 @@ import Login from './containers/Login';
 import Register from './containers/Register';
 import ProjectList from './containers/ProjetList';
 import ProjectDetails from './components/ProjectDetails';
+import ProjectForm from './containers/ProjectForm';
 // import history from './components/History'
 
 const Routes = () => (
@@ -14,6 +15,7 @@ const Routes = () => (
       <Route path="/signup" component={Register} />
       <Route path="/login" component={Login} />
       <Route path="/projects" exact component={ProjectList} />
+      <Route path="/new" component={ProjectForm} />
       <Route path="/project/:projectId" exact component={ProjectDetails} />
     </Switch>
   </Router>

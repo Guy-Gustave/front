@@ -7,6 +7,7 @@ import { setProjects } from '../actions/index';
 import ProjectComponent from '../components/ProjectComponent';
 import ProjectForm from './ProjectForm';
 import { url } from '../apiRequests/apiLink';
+import Footer from '../components/Footer';
 
 const ProjectList = (props) => {
   const dispatch = useDispatch();
@@ -23,8 +24,9 @@ const ProjectList = (props) => {
 
   return (
     <div className="affiche">
-      <ProjectForm handleFetchProjects={fetchProjects}/>
+      
       <ProjectComponent/>
+      <Footer />
     </div>
   );
 };
