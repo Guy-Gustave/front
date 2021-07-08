@@ -6,6 +6,7 @@ import axios from 'axios';
 import { selectedProject } from '../actions/index';
 import '../App.css';
 import TaskList from '../containers/TaskList';
+import Footer from '../components/Footer';
 import { url } from '../apiRequests/apiLink';
 
 const ProjectDetails = (props) => {
@@ -57,6 +58,7 @@ const ProjectDetails = (props) => {
           </div>
           <div className="tas">
             <TaskList projectId = {projectId}/>
+            <Footer />
           </div>
 
         </div>
