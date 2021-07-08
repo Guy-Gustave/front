@@ -377,9 +377,14 @@ input[placeholder] {
   width: 100%;
   border-right: 1px solid gray;
   padding: 20px 0;
+  font-size: 1.7rem;
 }
 
-.f :hover {
+.foot a {
+  color: #fff;
+}
+
+.f:hover {
   width: 100%;
   border-right: 1px solid gray;
   background-color: rgb(24, 190, 231);
@@ -438,5 +443,16 @@ input[placeholder] {
     font-size: 1rem;
     height: 2.4rem;
 
-}
+  }
+
+  .f {
+    width: 100%;
+    border-right: 1px solid gray;
+    padding: 10px 0;
+    font-size: 0.8rem;
+  }
+  
+  .foot a {
+    color: #fff;
+  }
 }
