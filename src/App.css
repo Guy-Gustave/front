@@ -61,23 +61,26 @@ a {
   margin: 10px 3rem;
   background-color: #fff;
   border: 1px solid #fff;
+  justify-content: space-between;
+}
+
+.header,
+.content,
+.projet h1 {
+  width: 100%;
 }
 
 .column h1 {
   color: rgb(20, 18, 18);
   font-size: x-large;
-  padding-bottom: 2rem;
+  width: 100%;
   display: flex;
+  flex-direction: row;
 }
 
 .column p {
   text-align: center;
   padding: 10px 50px;
-}
-
-.projet h1,
-.content {
-  padding: 10px;
 }
 
 .column.rp p {
@@ -145,12 +148,15 @@ a {
   padding: 5px 3rem;
   display: flex;
   font-size: 2rem;
+  flex-direction: row-reverse;
 }
 
 .header {
   padding: 10px 3rem;
   font-size: 1.5rem;
   color: #282c34;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .ui.cards > .card .meta.price {
