@@ -7,7 +7,7 @@ it('renders correctly', () => {
     .create(
       <div className="App">
         <BrowserRouter>
-        <Link to="/" role="button">Home</Link>
+          <Link to="/" role="button">Home</Link>
         </BrowserRouter>
       </div>,
     )
@@ -20,7 +20,7 @@ it('renders correctly', () => {
     .create(
       <div className="App">
         <BrowserRouter>
-        <Link to="/new" role="button">create project</Link>
+          <Link to="/new" role="button">create project</Link>
         </BrowserRouter>
       </div>,
     )

@@ -48,7 +48,6 @@ input[type=password] {
   box-sizing: border-box;
 }
 
-
 @media only screen and (max-width: 768px) {
   .homeBtn {
     font-size: 20px;

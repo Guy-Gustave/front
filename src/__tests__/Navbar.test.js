@@ -7,7 +7,7 @@ it('renders correctly', () => {
     .create(
       <div className="App">
         <BrowserRouter>
-        <h1>Track it</h1>
+          <h1>Track it</h1>
         </BrowserRouter>
       </div>,
     )
