@@ -57,25 +57,24 @@ a {
 }
 
 .projet {
-  display: flex;
-  margin: 10px 3rem;
-  background-color: #fff;
-  border: 1px solid #fff;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 40% 40% 17%;
+  grid-gap: 5px;
+  margin: 10px;
+  overflow: hidden;
 }
 
 .header,
 .content,
 .projet h1 {
   width: 100%;
+
 }
 
 .column h1 {
   color: rgb(20, 18, 18);
   font-size: x-large;
   width: 100%;
-  display: flex;
-  flex-direction: row;
 }
 
 .column p {
@@ -91,8 +90,10 @@ a {
 .affiche {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
-  column-gap: 2rem;
+  padding: 0;
+  padding-bottom: 0;
+  margin-bottom: 1.6rem;
+  /* height: 100vh; */
 }
 
 .detail-project {
@@ -149,6 +150,7 @@ a {
   display: flex;
   font-size: 2rem;
   flex-direction: row-reverse;
+  color: black;
 }
 
 .header {
@@ -156,7 +158,12 @@ a {
   font-size: 1.5rem;
   color: #282c34;
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1px 3px;
+  white-space: nowrap;
+  /* text-align: start; */
+  /* flex-direction: row; */
 }
 
 .ui.cards > .card .meta.price {
@@ -380,6 +387,7 @@ input[placeholder] {
   left: 0;
   bottom: 0;
   width: 100%;
+  margin: 0;
   justify-content: space-around;
 }
 
@@ -396,11 +404,27 @@ input[placeholder] {
   background-color: rgb(24, 190, 231);
 }
 
+.item-title-div {
+  display: flex;
+  text-align: start;
+  padding: 0 7px;
+  align-items: center;
+  border-right: 1px solid lightgray;
+}
+
 @media only screen and (max-width: 768px) {
   form {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .projet {
+    display: grid;
+    grid-template-columns: 40% 40% 17%;
+    grid-gap: 5px;
+    margin: 10px;
+    overflow: hidden;
   }
 
   .itm {
@@ -419,15 +443,34 @@ input[placeholder] {
     box-sizing: border-box;
   }
 
+  .header {
+    font-size: 1.5rem;
+    color: #282c34;
+    display: flex;
+    border-right: 1px solid lightgray;
+  }
+
   .column {
     display: flex;
+  }
+
+  .item-title-div {
+    display: flex;
+    /* background-color: rosybrown; */
+    width: 100%;
   }
 
   .column h1,
   .header {
     font-size: 1rem;
     margin: 0;
-    padding: 10px 1rem;
+  }
+
+  .item-title-div > h1 {
+    padding: 5px 5px 5px 0 ;
+    white-space: nowrap;
+    overflow: auto;
+    /* text-overflow: ellipsis; */
   }
 
   .ho {

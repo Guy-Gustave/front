@@ -58,7 +58,7 @@ const ProjectDetails = (props) => {
           </div>
           <div className="tas">
             <TaskList projectId = {projectId}/>
-            <Footer />
+            {/* <Footer /> */}
           </div>
 
         </div>
