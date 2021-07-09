@@ -38,9 +38,9 @@ class TaskList extends Component {
     if (e.key === 'Enter') {
       axios.post(`${url}/projects/${this.props.projectId}/tasks`, {
         "title": this.state.inputValue,
-        "done":false,
+        "done": false,
         "project_id": this.props.projectId
-    })
+      })
         .then(response => {
           const tasks = update(this.state.tasks, {
             $splice: [[0, 0, response.data]]
@@ -55,24 +55,22 @@ class TaskList extends Component {
 
   render() {
     return (
-      <div className="conta">
-        <div className="listWrapper">
-          <input className="taskInput" type="text"
-            placeholder="Add a task" maxLength="50"
-            onKeyPress={this.createTask}
-            value={this.state.inputValue} onChange={this.handleChange} />
-          <ul className="taskList">
-            {this.state.tasks.map((task) => {
-              return (
-                <li className="task" task={task} key={task.id}>
-                  <input className="taskCheckbox" type="checkbox" />
-                  <label className="taskLabel">{task.title}</label>
-                  <span className="deleteTaskBtn"></span>
-                </li>
-              )
-            })}
-          </ul>
-        </div>
+      <div className="listWrapper">
+        <input className="taskInput" type="text"
+          placeholder="Add a task" maxLength="50"
+          onKeyPress={this.createTask}
+          value={this.state.inputValue} onChange={this.handleChange} />
+        <ul className="taskList">
+          {this.state.tasks.map((task) => {
+            return (
+              <li className="task" task={task} key={task.id}>
+                <input className="taskCheckbox" type="checkbox" />
+                <label className="taskLabel">{task.title}</label>
+                <span className="deleteTaskBtn"></span>
+              </li>
+            )
+          })}
+        </ul>
       </div>
     )
   }

@@ -96,22 +96,22 @@ a {
   /* height: 100vh; */
 }
 
-.detail-project {
+/* .detail-project {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2rem;
-}
+  margin: 2rem; */
+/* } */
 
 .column img {
   width: 30rem;
   margin: 2rem;
 }
 
-.tag-price {
+/* .tag-price {
   padding: 1rem 1.7rem;
-  font-size: 1.3rem;
-}
+  font-size: 1rem;
+} */
 
 .column h3 {
   font-size: xx-large;
@@ -246,7 +246,7 @@ form {
   align-items: center;
 }
 
-input[type=text],
+/* input[type=text],
 input[type=password] {
   width: 30%;
   font-size: 12px;
@@ -255,7 +255,7 @@ input[type=password] {
   border: 1px solid #ccc;
   border-radius: 0.25rem;
   box-sizing: border-box;
-}
+} */
 
 .btn {
   width: 150px;
@@ -267,10 +267,11 @@ input[type=password] {
 }
 
 ul.taskList {
-  padding: 0 25px;
-  width: 40%;
-  margin-left: auto;
-  margin-top: 3rem;
+  display: flex ;
+  width: 90%;
+  flex-direction: column;
+  margin-top: 9rem;
+  /* overflow: auto; */
 }
 
 li.task {
@@ -335,25 +336,25 @@ input[placeholder] {
 }
 
 .listWrapper {
-  position: absolute;
-  bottom: 50px;
-  top: 120px;
-  right: 0;
-  left: 0;
-  overflow: auto;
+  display: flex;
+  margin-top: 3rem;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .listWrapper input[type=text] {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  margin-left: auto;
+  position: absolute;
+  width: 80%;
+  margin-left: 3rem;
   border-radius: 15px;
+  top: 2rem;
 }
 
 .desc {
-  margin-right: 3rem;
-  width: 40%;
+  width: 90%;
+  display: flex;
+  flex-flow: column;
+  text-align: start;
 }
 
 .desc h2 span {
@@ -399,6 +400,11 @@ input[placeholder] {
   width: 100%;
   border-right: 1px solid gray;
   background-color: rgb(24, 190, 231);
+}
+
+.title-proj {
+  display: flex;
+  text-align: start;
 }
 
 .item-title-div {
@@ -449,6 +455,12 @@ input[placeholder] {
 
   .column {
     display: flex;
+  }
+
+  .detail-project {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
   }
 
   .item-title-div {

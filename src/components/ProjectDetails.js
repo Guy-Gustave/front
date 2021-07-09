@@ -30,7 +30,7 @@ const ProjectDetails = (props) => {
   return (
     <div className="ui grid container">
       <h1>
-        Back to 
+        Back to
         <Link to="/projects"> ProjectList </Link>
       </h1>
       {Object.keys(project).length === 0 ? (
@@ -38,14 +38,16 @@ const ProjectDetails = (props) => {
       ) : (
         <div className="detail-project">
           <div className="desc">
-            <h1 className="tag-price">
-              Id=
+            <div className="title-proj">
+              <h1 className="tag-price">
               {id}
-            </h1>
-            <h2>
-              Project's title:
-              <span>{title}</span>
-            </h2>
+                  {') '}
+              </h1>
+              <h2>
+                Project's title:
+                <span>{title}</span>
+              </h2>
+            </div>
             <h3 className="tag-price">
               Description:
               {description}
@@ -57,10 +59,9 @@ const ProjectDetails = (props) => {
 
           </div>
           <div className="tas">
-            <TaskList projectId = {projectId}/>
+            <TaskList projectId={projectId} />
             {/* <Footer /> */}
           </div>
-
         </div>
       )}
 
