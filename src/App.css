@@ -447,7 +447,6 @@ input[placeholder] {
 
   li.task {
     font-size: 1em;
-
   }
 
   form input[type=text] {
@@ -499,10 +498,6 @@ input[placeholder] {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-  }
-
-  .desc {
-    font-size: 1rem;
   }
 
   .ho a {
