@@ -41,7 +41,7 @@ const ProjectDetails = (props) => {
             <div className="title-proj">
               <h1 className="tag-price">
               {id}
-                  {') '}
+                  {')  '}
               </h1>
               <h2>
                 Project's title:

@@ -22,7 +22,7 @@ class TaskList extends Component {
       .then(response => {
         this.setState({ tasks: response.data })
       })
-      .catch(error => console.log(error))
+      // .catch(error => console.log(error))
   }
 
   componentDidMount() {
