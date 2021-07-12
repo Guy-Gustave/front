@@ -271,9 +271,7 @@ ul.taskList {
   display: flex;
   width: 90%;
   flex-direction: column;
-  margin-top: 9rem;
-
-  /* overflow: auto; */
+  margin-top: 17rem;
 }
 
 li.task {
