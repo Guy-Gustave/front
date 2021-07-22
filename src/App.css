@@ -1,0 +1,525 @@
+.App {
+  text-align: center;
+  background-color: rgb(252, 247, 247);
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  text-decoration: none;
+  margin: 0;
+}
+
+.column {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.projet {
+  display: grid;
+  grid-template-columns: 40% 40% 17%;
+  grid-gap: 5px;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.header,
+.content,
+.projet h1 {
+  width: 100%;
+}
+
+.column h1 {
+  color: rgb(20, 18, 18);
+  font-size: x-large;
+  width: 100%;
+}
+
+.column p {
+  text-align: center;
+  padding: 10px 50px;
+}
+
+.column.rp p {
+  font-size: 18px;
+  color: #777;
+}
+
+.affiche {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  padding-bottom: 0;
+  margin-bottom: 1.6rem;
+
+  /* height: 100vh; */
+}
+
+/* .detail-project {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem; */
+
+/* } */
+
+.column img {
+  width: 30rem;
+  margin: 2rem;
+}
+
+/* .tag-price {
+  padding: 1rem 1.7rem;
+  font-size: 1rem;
+} */
+
+.column h3 {
+  font-size: xx-large;
+  color: rgb(63, 13, 13);
+  padding-bottom: 3rem;
+}
+
+.ho a {
+  text-decoration: none;
+  border: 1px solid blue;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  margin-bottom: 10rem;
+}
+
+.foot a {
+  color: #fff;
+}
+
+.ui.cards > .card > .image {
+  height: 250px;
+  padding: 20px;
+  background: rgb(240, 233, 233);
+  margin: auto;
+}
+
+.ui.cards > .card > .image > img {
+  height: 100%;
+  max-width: 100%;
+  width: auto;
+}
+
+.content {
+  margin-left: auto;
+  padding: 5px 3rem;
+  display: flex;
+  font-size: 2rem;
+  flex-direction: row-reverse;
+  color: black;
+}
+
+.header {
+  padding: 10px 3rem;
+  font-size: 1.5rem;
+  color: #282c34;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.ui.cards > .card .meta.price {
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+}
+
+.ui.cards > .card .meta.price > a {
+  font-size: 1.3rem;
+  color: #222;
+}
+
+.ui.menu.fixed {
+  height: 60px;
+  padding-top: 15px;
+}
+
+.ui.grid.container {
+  margin-top: 35px;
+}
+
+.ui.grid > .row {
+  background: #fff;
+}
+
+.ui.grid > .row > .column.lp {
+  padding: 20px 40px 20px 20px;
+  align-self: flex-start !important;
+}
+
+.ui.grid > .row > .column.rp {
+  padding: 20px 20px 20px 40px;
+  text-align: left;
+  align-self: flex-start !important;
+}
+
+.ui.label,
+.ui.labels .label {
+  font-size: 22px;
+}
+
+.nav {
+  background-color: #61dafb;
+  color: #fff;
+  font-size: 3.5rem;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.nav h1 {
+  text-align: center;
+  margin: auto;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.formulaire {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.itm {
+  height: 1.8rem;
+  margin: 0 2rem;
+  padding: 1px 5px;
+  width: 22%;
+  font-size: 10px;
+}
+
+.py-2 {
+  height: 2.8rem;
+  margin: 0 2rem;
+  padding: 1px 5px;
+  width: 27%;
+  font-size: 10px;
+}
+
+form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* input[type=text],
+input[type=password] {
+  width: 30%;
+  font-size: 12px;
+  padding: 0.625rem 1.25rem;
+  margin: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+} */
+
+.btn {
+  width: 150px;
+  height: 1.8rem;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+ul.taskList {
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  margin-top: 17rem;
+}
+
+li.task {
+  list-style-type: none;
+  font-size: 1.2em;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+li.task:hover .deleteTaskBtn {
+  visibility: visible;
+  opacity: 1;
+}
+
+input.taskCheckbox {
+  position: relative;
+  float: left;
+  margin-right: 10px;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  margin-left: 5px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+input.taskCheckbox:checked::after {
+  color: green;
+  content: "\2713";
+  display: block;
+  font-size: 17px;
+  height: 17px;
+  position: absolute;
+  width: 17px;
+  left: 0.5px;
+  bottom: 2px;
+}
+
+input.taskCheckbox + label.taskLabel {
+  color: black;
+}
+
+input.taskCheckbox:checked + label.taskLabel {
+  text-decoration: line-through;
+  color: #656565;
+}
+
+input[placeholder] {
+  font-size: 1.1em;
+}
+
+.btn- {
+  background-color: rgb(151, 191, 15);
+  font-size: 28px;
+  color: whitesmoke;
+  padding: 0.7rem 1.7rem;
+  border-radius: 1.5rem;
+}
+
+.listWrapper {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.listWrapper input[type=text] {
+  position: absolute;
+  width: 80%;
+  margin-left: 3rem;
+  border-radius: 15px;
+  top: 2rem;
+}
+
+.desc {
+  width: 90%;
+  display: flex;
+  flex-flow: column;
+  text-align: start;
+}
+
+.desc h2 span {
+  padding-left: 1rem;
+  font-weight: 700;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.ho {
+  display: flex;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 5rem 10rem;
+  justify-content: space-around;
+  text-decoration: none;
+}
+
+.foot {
+  display: flex;
+  background-color: black;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  justify-content: space-around;
+}
+
+.f {
+  width: 100%;
+  border-right: 1px solid gray;
+  padding: 20px 0;
+  font-size: 1.7rem;
+}
+
+.f:hover {
+  width: 100%;
+  border-right: 1px solid gray;
+  background-color: rgb(24, 190, 231);
+}
+
+.title-proj {
+  display: flex;
+  text-align: start;
+}
+
+.item-title-div {
+  display: flex;
+  text-align: start;
+  padding: 0 7px;
+  align-items: center;
+  border-right: 1px solid lightgray;
+}
+
+@media only screen and (max-width: 768px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projet {
+    display: grid;
+    grid-template-columns: 40% 40% 17%;
+    grid-gap: 5px;
+    margin: 10px;
+    overflow: hidden;
+  }
+
+  .itm {
+    width: 50%;
+    margin: 2rem 1rem;
+  }
+
+  .desc {
+    height: 4rem;
+  }
+
+  ul.taskList {
+    margin-top: 18rem;
+  }
+
+  li.task {
+    font-size: 1em;
+  }
+
+  form input[type=text] {
+    width: 50%;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+  }
+
+  .header {
+    font-size: 1.5rem;
+    color: #282c34;
+    display: flex;
+    border-right: 1px solid lightgray;
+  }
+
+  .column {
+    display: flex;
+  }
+
+  .detail-project {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+  }
+
+  .item-title-div {
+    display: flex;
+
+    /* background-color: rosybrown; */
+    width: 100%;
+  }
+
+  .column h1,
+  .header {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .item-title-div > h1 {
+    padding: 5px 5px 5px 0;
+    white-space: nowrap;
+    overflow: auto;
+
+    /* text-overflow: ellipsis; */
+  }
+
+  .ho {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .ho a {
+    text-decoration: none;
+    border: 1px solid blue;
+    padding: 0.3rem 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+  }
+
+  .btn-group-lg > .btn,
+  .btn-lg {
+    font-size: 1rem;
+    height: 2.4rem;
+  }
+
+  .f {
+    width: 100%;
+    border-right: 1px solid gray;
+    padding: 10px 0;
+    font-size: 0.8rem;
+  }
+
+  .foot a {
+    color: #fff;
+  }
+}

@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="App"
+>
+  <a
+    href="/"
+    onClick={[Function]}
+    role="button"
+  >
+    Home
+  </a>
+</div>
+`;
+
+exports[`renders correctly 2`] = `
+<div
+  className="App"
+>
+  <a
+    href="/new"
+    onClick={[Function]}
+    role="button"
+  >
+    create project
+  </a>
+</div>
+`;
+
+exports[`renders home link correctly 1`] = `
+<div
+  className="App"
+>
+  <a
+    href="/"
+    onClick={[Function]}
+    role="button"
+  >
+    Home
+  </a>
+</div>
+`;

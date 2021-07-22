@@ -1,28 +1,40 @@
+/* eslint-disable */
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 import axios from 'axios';
+// import { useHistory } from 'react-router-dom';
 import { setProjects } from '../actions/index';
-import ProjectComponent from '../coomponents/ProjectComponent';
+import ProjectComponent from '../components/ProjectComponent';
 import ProjectForm from './ProjectForm';
+import { url } from '../apiRequests/apiLink';
+import Footer from '../components/Footer';
 
-const ProjectList = () => {
+const ProjectList = (props) => {
   const dispatch = useDispatch();
 
   const fetchProjects = async () => {
-    const response = await axios.get('https://trackap.herokuapp.com/projects');
+    const response = await axios.get(`${url}/projects`);
     dispatch(setProjects(response.data));
   };
 
   useEffect(() => {
     fetchProjects();
+    // eslint-disable-next-line
   }, []);
 
   return (
     <div className="affiche">
-      <ProjectForm />
-      <ProjectComponent />
+      
+      <ProjectComponent/>
+      <Footer />
     </div>
   );
 };
 
-export default ProjectList;
+const mapStateToProps = (state) => (
+  {
+    projects: state.allProjects,
+  }
+);
+
+export default connect(mapStateToProps, null)(ProjectList);

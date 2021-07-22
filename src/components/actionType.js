@@ -1,8 +1,11 @@
-const ActionsType = {
+export const ActionsType = {
   CREATE_PROJECT: 'CREATE_PROJECT',
   SET_PROJECTS: 'SET_PROJECTS',
   SELECT_PROJECTS: 'SELECT_PROJECTS',
   REMOVE_SELECT_PROJECTS: 'REMOVE_SELECT_PROJECTS',
 };
 
-export default ActionsType;
+export const USER_API_REQUEST = 'USER_API_REQUEST';
+export const USER_API_SUCCESS = 'USER_API_SUCCESS';
+export const USER_API_FAILURE = 'USER_API_FAILURE';
+export const LOGOUT_USER = 'LOGOUT_USER';
