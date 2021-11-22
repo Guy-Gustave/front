@@ -58,7 +58,7 @@ const Login = props => {
         <Link className={LoginStyles.homeLink} style={{ textDecoration: 'none' }} to="/">
           <button type="button" data-testid="home" className={`${LoginStyles.homeBtn } btn`}>Home</button>
         </Link>
-        {/* <h4>Login</h4> */}
+        
         <label htmlFor="email" className="text-left">
           Email:
           <br />
